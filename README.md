@@ -20,7 +20,7 @@ GROUP BY p.product_category_name
 ORDER BY COUNT(product_id) DESC
 LIMIT 20
 ```
-## Your result shows:
+## The result of the top 20 shows:
 
 - Most categories have a category name.
 
