@@ -32,7 +32,7 @@ LIMIT 20
 
 ## SQL Query:
 ```sql
-SELECT pcnt.product_category_name_english,SUM(op.payment_value ) AS 'Revenue'
+SELECT pcnt.product_category_name_english,SUM(oi.price) AS 'Revenue'
 FROM products p 
 JOIN product_category_name_translation pcnt 
 ON pcnt.product_category_name = p.product_category_name
@@ -43,9 +43,11 @@ ON oi.order_id = op.order_id
 GROUP BY pcnt.product_category_name_english
 ORDER BY SUM(op.payment_value) DESC
 LIMIT 20
+
 ```
 ## The results of top 20 shows:
 
-- that the most products that generate revenues are bed_bath_table and also validates that these products are the most ordered.
+- that the most products that generate revenues are bed_bath_table that also validates that these products are the most ordered.
 
-<img width="407" height="552" alt="Capture3" src="https://github.com/user-attachments/assets/1510c521-926a-42d6-9726-62cff7b82c91" />
+<img width="402" height="550" alt="Capture3" src="https://github.com/user-attachments/assets/a68ed32b-ec2d-43ab-948c-5ab55b74cc2a" />
+
