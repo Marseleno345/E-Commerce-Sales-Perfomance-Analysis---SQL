@@ -38,16 +38,15 @@ JOIN product_category_name_translation pcnt
 ON pcnt.product_category_name = p.product_category_name
 JOIN order_items oi 
 USING(product_id)
-JOIN order_payments op
-ON oi.order_id = op.order_id
 GROUP BY pcnt.product_category_name_english
-ORDER BY SUM(op.payment_value) DESC
+ORDER BY Revenue DESC
 LIMIT 20
 
 ```
 ## The results of top 20 shows:
 
-- that the most products that generate revenues are bed_bath_table that also validates that these products are the most ordered.
+- that the most products that generate revenues are Health_beauty.
 
-<img width="402" height="550" alt="Capture3" src="https://github.com/user-attachments/assets/a68ed32b-ec2d-43ab-948c-5ab55b74cc2a" />
+<img width="406" height="546" alt="Capture3" src="https://github.com/user-attachments/assets/62a41101-4d25-47c5-8f4c-74781185aca8" />
+
 
