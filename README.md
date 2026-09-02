@@ -10,19 +10,21 @@ Below is the Schema used for the analysis:
 
   ## SQL Query
   ```Sql query
-SELECT p.product_category_name ,COUNT(oi.order_item_id ) AS 'total_count' 
+SELECT pcnt.product_category_name_english,COUNT(oi.order_item_id ) AS 'total_count' 
 FROM products p 
-LEFT JOIN order_items oi 
+JOIN product_category_name_translation pcnt 
+ON pcnt.product_category_name = p.product_category_name 
+JOIN order_items oi
 USING (product_id)
 GROUP BY p.product_category_name 
-ORDER BY COUNT(product_id) DESC 
+ORDER BY COUNT(product_id) DESC
+LIMIT 20
 ```
 ## Your result shows:
 
 - Most categories have a category name.
 
-- 1,603 records have NULL for product_category_name.
+- showing that the most ordered products of 11,115 are bed_bath_table.
 
-- showing that the most ordered products is cama_mesa_banho which means bed,tables and bath.
+<img width="416" height="536" alt="Capture2" src="https://github.com/user-attachments/assets/49b09af4-f91e-4cb4-a5a4-3817b34bbc7f" />
 
-<img width="378" height="631" alt="Capture2" src="https://github.com/user-attachments/assets/a7115075-0826-4004-ba52-379908780f13" />
