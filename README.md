@@ -1,4 +1,4 @@
-# Brazilian E-Commerce-Sales-Perfomance-Analysis---SQL
+# Brazilian E-Commerce-Sales-Perfomance-Analysis-SQL
 Analyzing sales data using SQL to identify top-performing products, customers, categories, revenue drivers, and sales trends with focus on turing raw data into meaningful business insights 
 This project explores a fictional sales database to analyze product performance, customer behavior and other businesses question to answer using SQL.
 
@@ -8,7 +8,7 @@ Below is the Schema used for the analysis:
 ----
 # Question 1: Which products are ordered most frequently?
 
-  ## SQL Query
+  ## SQL Query:
   ```Sql query
 SELECT pcnt.product_category_name_english,COUNT(oi.order_item_id ) AS 'total_count' 
 FROM products p 
@@ -28,3 +28,24 @@ LIMIT 20
 
 <img width="416" height="536" alt="Capture2" src="https://github.com/user-attachments/assets/49b09af4-f91e-4cb4-a5a4-3817b34bbc7f" />
 
+## Question 2: Which products generate the most revenues?
+
+## SQL Query:
+```sql
+SELECT pcnt.product_category_name_english,SUM(op.payment_value ) AS 'Revenue'
+FROM products p 
+JOIN product_category_name_translation pcnt 
+ON pcnt.product_category_name = p.product_category_name
+JOIN order_items oi 
+USING(product_id)
+JOIN order_payments op
+ON oi.order_id = op.order_id
+GROUP BY pcnt.product_category_name_english
+ORDER BY SUM(op.payment_value) DESC
+LIMIT 20
+```
+## The results of top 20 shows:
+
+- that the most products that generate revenues are bed_bath_table and also validates that these products are the most ordered.
+
+<img width="407" height="552" alt="Capture3" src="https://github.com/user-attachments/assets/1510c521-926a-42d6-9726-62cff7b82c91" />
