@@ -28,7 +28,7 @@ LIMIT 20
 
 <img width="416" height="536" alt="Capture2" src="https://github.com/user-attachments/assets/49b09af4-f91e-4cb4-a5a4-3817b34bbc7f" />
 
-## Question 2: Which products generate the most revenues?
+# Question 2: Which products generate the most revenues?
 
 ## SQL Query:
 ```sql
@@ -45,15 +45,17 @@ LIMIT 20
 ```
 ## The results of top 20 shows:
 
-- that the most products that generate revenues are Health_beauty.
+- that the most products that generate revenues are Health_beauty being the first.
+- while second are watches_gifts.
+- and third bed_bath_table.
 
 <img width="406" height="546" alt="Capture3" src="https://github.com/user-attachments/assets/62a41101-4d25-47c5-8f4c-74781185aca8" />
 
-The above results does raise another important question
+### ***Which does raise another important question***.
 
-## How does health_beauty generate more revenue while have lower order_id Counts than Bed_bath_table?
+# How does health_beauty generate more revenue while having lower order Counts than Bed_bath_table?
 
-SQL Query:
+## SQL Query:
 ``` sql
 SELECT pcnt.product_category_name_english,AVG(oi.price) AS 'Avg_prices'
 FROM products p 
