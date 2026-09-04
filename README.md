@@ -53,7 +53,11 @@ LIMIT 20
 
 ### ***Which does raise another important question***.
 
-# How does health_beauty generate more revenue while having lower order Counts than Bed_bath_table?
+# Does the most ordered products are the same products that generate the most revenue?
+
+and obviously according to the two table results above the answer is no
+
+so the next sql query written to answer why they aren't
 
 ## SQL Query:
 ``` sql
