@@ -69,11 +69,33 @@ JOIN order_items oi
 USING(product_id)
 WHERE pcnt.product_category_name_english IN('health_beauty','bed_bath_table','watches_gifts')
 GROUP BY pcnt.product_category_name_english 
-ORDER BY Avg_prices  DESC 
+ORDER BY Avg_prices DESC 
 ```
 - the query results does show that the average prices for the top 3 product_category.
 - which does show that watches_gifts does have the highest average prices and since it does have lower order counts than both categories then it does generate lower revenue caused by it's high average prices.
 - but as for health_beauty it shows that it does have higher average price than bed_bath_table.
 
 <img width="413" height="84" alt="Capture4" src="https://github.com/user-attachments/assets/05ce19c9-56da-47c7-a318-02fe33779597" />
+
+# Which products having the highest score review:
+
+## SQL Query:
+
+```sql
+SELECT pcnt.product_category_name_english,t.review_score 
+FROM products p 
+JOIN product_category_name_translation pcnt 
+ON pcnt.product_category_name = p.product_category_name
+JOIN order_items oi 
+USING(product_id)
+JOIN order_reviews t 
+ON oi.order_id = t.order_id
+GROUP BY pcnt.product_category_name_english
+ORDER BY t.review_score DESC
+LIMIT 20
+```
+- this query does most products category with the highest review score.
+
+  <img width="634" height="490" alt="Screenshot 2026-09-05 045036" src="https://github.com/user-attachments/assets/0586164b-4528-441d-a48e-770ce23d5e07" />
+
 
