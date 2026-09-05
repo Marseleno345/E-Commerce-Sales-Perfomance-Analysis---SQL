@@ -94,7 +94,7 @@ GROUP BY pcnt.product_category_name_english
 ORDER BY t.review_score DESC
 LIMIT 20
 ```
-- this query does most products category with the highest review score.
+- this query does show the most products category with the highest review score.
 
   <img width="634" height="490" alt="Screenshot 2026-09-05 045036" src="https://github.com/user-attachments/assets/0586164b-4528-441d-a48e-770ce23d5e07" />
 
