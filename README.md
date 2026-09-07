@@ -82,7 +82,7 @@ ORDER BY Avg_prices DESC
 ## SQL Query:
 
 ```sql
-SELECT pcnt.product_category_name_english,t.review_score 
+SELECT pcnt.product_category_name_english,MAX(t.review_score) 
 FROM products p 
 JOIN product_category_name_translation pcnt 
 ON pcnt.product_category_name = p.product_category_name
@@ -96,6 +96,7 @@ LIMIT 20
 ```
 - this query does show the most products category with the highest review score.
 
-  <img width="634" height="490" alt="Screenshot 2026-09-05 045036" src="https://github.com/user-attachments/assets/0586164b-4528-441d-a48e-770ce23d5e07" />
+  <img width="691" height="453" alt="Screenshot 2026-09-05 045036" src="https://github.com/user-attachments/assets/95afe545-15f7-4105-bfcf-71e20092f750" />
+
 
 
