@@ -53,7 +53,7 @@ LIMIT 20
 
 ### ***Which does raise another important question***.
 
-# Does the most ordered products are the same products that generate the most revenue?
+# Question 3: Does the most ordered products are the same products that generate the most revenue?
 
 and obviously according to the two table results above the answer is no
 
@@ -77,7 +77,7 @@ ORDER BY Avg_prices DESC
 
 <img width="413" height="84" alt="Capture4" src="https://github.com/user-attachments/assets/05ce19c9-56da-47c7-a318-02fe33779597" />
 
-# Which products having the highest score review:
+# Question 4: Which products having the highest score review:
 
 ## SQL Query:
 
