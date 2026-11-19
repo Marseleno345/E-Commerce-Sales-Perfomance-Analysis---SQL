@@ -1,6 +1,7 @@
-# Brazilian E-Commerce-Sales-Perfomance-Analysis-SQL
-Analyzing sales data using SQL to identify top-performing products, customers, categories, revenue drivers, and sales trends with focus on turing raw data into meaningful business insights 
-This project explores a fictional sales database to analyze product performance, customer behavior and other businesses question to answer using SQL.
+# Olist E-Commerce Sales & Category Analysis-SQL
+A Power BI dashboard built on the Brazilian E-Commerce Public Dataset by Olist. The data lives in a SQLite database, was explored and queried with SQL in DBeaver, and was visualised in Power BI through an ODBC connection.
+Dashboard:
+<img width="1320" height="746" alt="Screenshot (554)" src="https://github.com/user-attachments/assets/59d8d812-5dc5-43d1-865a-d11fd604565f" />
 
 # Database Schema
 Below is the Schema used for the analysis:
