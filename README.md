@@ -78,7 +78,7 @@ LIMIT 20
 
 ### ***Which does raise another important question???***.
 
-# Question 3: Does the most ordered products are the same products that generate the most revenue?
+# Question 3: Are the most ordered categories also the ones that generate the most revenue?
 
 to answer this question we need to get the average price for the top 20 products category. 
 
@@ -102,8 +102,12 @@ LIMIT 20
 
 <img width="848" height="970" alt="Screenshot (558)" src="https://github.com/user-attachments/assets/f881d7dd-6bad-4aab-8019-2524e4c90a83" />
 
+# Conclusion
 
+Revenue depends on two things: how many items are sold and how much each one costs (Price). The most ordered categories are not automatically the top earners.
 
+- **bed_bath_table** is the most ordered category (9.4K orders) but only 3rd in revenue (1.04M). It sells in high volume at a low price per item, so it does not appear among the top average prices.
+- **watches_gifts** is only 7th in orders (5.6K) but 2nd in revenue (1.20M). Its average item price is about 201, much higher than most categories, so fewer orders still produce large revenue.
+- **health_beauty** leads in revenue (1.26M) because it combines both: it is 2nd in orders (8.8K) and has a solid price per item.
 
-
-
+**Takeaway:** high volume does not guarantee high revenue. Categories with a high average price can match or beat high-volume categories with far fewer orders. This is why looking at orders, revenue and average price together gives a fuller picture than any one of them alone.
